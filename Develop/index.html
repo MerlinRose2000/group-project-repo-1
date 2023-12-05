@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Christmas Movie Quiz</title>
+</head>
+
+<body>
+    <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">
+          <div class="inner">❄</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">☀</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❄</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">☀</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❄</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">☀</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❄</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">☀</div>
+        </div>
+    </div>
+    <header>
+    <section id = "score_keeper" style="display: none">
+        <input type="button" value="View High Scores" onclick="view_high_scores()"></br>
+        Score: <var id="score"> </var>
+    </section>
+
+    <section id= "countdownTimer" style="display: none">
+        Time Remaining: <span id="timer"></span>
+    </section>
+
+    </header>
+
+    <a href="#" class="previous">&laquo; Previous</a>
+    <a href="#" class="next"> 
+        <img>https://files.slack.com/files-pri/T05S8SASKL4-F068P3LLXE0/blue_and_red_illustrated_christmas_movie_night_flyer__4_.png &raquo;</img>
+    </a>
+    <container class="container">
+         
+  <p>Multiple Select </p>
+    
+    
+  <div class="btn-group col-xs-12">
+    <div class="select">
+        <input type="checkbox" id="item_1">
+        <label class="btn btn-warning button_select" for="item_1">Select 1</label>
+    </div>
+    
+    <div class="select">
+        <input type="checkbox" id="item_2">
+        <label class="btn btn-warning button_select" for="item_2">Select 2</label>
+    </div>
+    
+    <div class="select">
+        <input type="checkbox" id="item_3">
+        <label class="btn btn-warning button_select" for="item_3">Select 3</label>
+    </div>
+    
+    <div class="select">
+        <input type="checkbox" id="item_4">
+        <label class="btn btn-warning button_select" for="item_4">Select 4</label>
+    </div>
+  </div>
+
+        <div class="container2">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/012/039/324/small/watercolor-banner-christmas-png.png" alt="banner" style="width:500px;">
+            <div class="centered">
+                <h1>Christmas Movie Quiz</h1>
+            </div>
+          </div>
+    <div id="homeContainer" class="none">
+        <h1> Welcome to the Javascript Web API Quiz</h1>
+        <p> You have 80 seconds to complete the following quiz questions. </p> 
+        <p> For each incorrect answer, 10 seconds will be deducted from the timer. If the timer reaches 0 before you finish, the game ends. </p>
+        <p><strong>Ready? Then let's 
+            <button id="startBtn">GO!</button>
+        </strong></p>
+        <br>
+    </div>
+    </container>
+
+        <div id="quizContainer" style="display: none"> 
+            <h2 id="questionHeading"></h2>
+                <ul>
+                    <div id="choices">
+                        <button id="answerChoiceA"></button>
+                    </div>
+                    <div>
+                        <button id="answerChoiceB"></button>
+                    </div>
+                    <div>
+                        <button id="answerChoiceC"></button>
+                    </div>
+                </ul>
+        </div>
+</body>
+
+<section id="AnswerResponse">
+</section>
+
+<div id= "game_over" style="display: none">
+    <h2> Game Over</h2>
+    Your Score was: <var id="end_score"> </var>
+    </br>
+    Initials: <input type="text"  value="initials" id="initials">
+    </br>
+    <input type="button" value="submit" id="submit_intials" onclick="submit_score()">
+</div>
+
+<div id="high_scores_page" style="display: none" >
+    <h2> High Scores </h2>
+    <div id="high_scores"></div>
+        <input type="button" value="Go Back" id="go_back" onclick="go_home()">
+        <input type="button" id="Clear Highscores" value ="clear" onclick="clear_hs()">
+    </div>
+
+    <script src="script.js"></script>
+
+</html> 
